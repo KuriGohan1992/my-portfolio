@@ -11,3 +11,39 @@
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
 }
+
+@keyframes background-scroll {
+	from {
+		background-position-x: 0;
+	}
+	to {
+		background-position-x: -3072px;
+	}
+}
+
+.animated-background {
+	background-image: url("/backgrounds/background-loop.webp");
+	background-position: left top;
+	background-repeat: repeat;
+	background-size: 3072px 1728px;
+	animation: background-scroll 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.animated-background {
+		animation: none;
+	}
+}
+
+.hide-scrollbar {
+	/* IE and Edge */
+	-ms-overflow-style: none;
+
+	/* Firefox */
+	scrollbar-width: none;
+}
+
+/* Chrome, Safari, and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+	display: none;
+}

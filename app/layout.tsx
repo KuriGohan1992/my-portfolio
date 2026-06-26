@@ -45,7 +45,7 @@ export default function RootLayout({
 			className={`${cormorantGaramond.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
 		>
 			<body className="min-h-full flex flex-col bg-page font-sans text-primary">
-				<header className="border-b border-primary/10">
+				<header className="fixed inset-x-0 top-0 z-50 border-b border-primary/10 bg-page/80 backdrop-blur">
 					<div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
 						<Link
 							href="/"

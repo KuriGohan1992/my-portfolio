@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import TimeGreeting from "@/components/TimeGreeting";
 
 export const metadata: Metadata = {
@@ -32,17 +31,17 @@ const commands = [
 
 export default function HomePage() {
 	return (
-		<section className="relative flex items-center isolate min-h-[calc(100vh-87px)] overflow-hidden">
-			<Image
+		<section className="animated-background relative flex items-center isolate min-h-dvh overflow-hidden">
+			{/* <Image
 				src="/backgrounds/steins_gate_vectors.jpg"
 				alt=""
 				width={1536}
 				height={864}
 				priority
-				className="absolute inset-0 -z-20 h-full w-full object-cover opacity-85"
-			/>
+				className="absolute inset-0 -z-20 h-full w-full object-cover opacity-80"
+			/> */}
 
-			<div aria-hidden="true" className="absolute inset-0 -z-10 bg-page/85" />
+			<div aria-hidden="true" className="absolute inset-0 -z-10 bg-page/80" />
 
 			<div className="mx-auto w-full max-w-6xl px-6 py-20">
 				<div>
