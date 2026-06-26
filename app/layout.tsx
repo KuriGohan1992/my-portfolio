@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
 import "./globals.css";
 
@@ -46,21 +47,23 @@ export default function RootLayout({
 		>
 			<body className="min-h-full flex flex-col bg-page font-sans text-primary">
 				<header className="fixed inset-x-0 top-0 z-50 border-b border-primary/10 bg-page/80 backdrop-blur">
-					<div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
-						<Link
-							href="/"
-							className="inline-block border-b border-primary pb-px font-logo text-3xl font-bold leading-none tracking-tight"
-						>
-							<span className="text-4xl">C</span>
-							ham;
-							<span className="inline-block bg-primary text-4xl leading-[0.9] text-page mx-0.5">
-								M
-							</span>
-							endez
-						</Link>
-
+					{/* <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
+						<Image
+							src="/images/white-logo.png"
+							width={200}
+							height={100}
+							alt="Picture of the author"
+						/> */}
+					{/* Alt Version of my logo */}
+					<div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-2">
+						<Image
+							src="/images/white-logo-gear.png"
+							width={200}
+							height={100}
+							alt="Picture of the author"
+						/>
 						<nav aria-label="Primary navigation">
-							<ul className="flex gap-6 font-mono text-sm text-muted">
+							<ul className="flex gap-6 font-logo text-sm text-muted">
 								{navigationLinks.map((link) => (
 									<li key={link.href}>
 										<Link
