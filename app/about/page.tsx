@@ -1,174 +1,109 @@
 import type { Metadata } from "next";
-import AboutSection from "@/components/AboutSection";
+
+import AboutGallery from "@/components/AboutGallery";
+import { aboutGalleryCollections } from "./gallery-data";
+import { skillGroups } from "./skills-data";
 
 export const metadata: Metadata = {
 	title: "About",
 	description:
-		"Learn about Cham Mendez, his experience, education, achievements, technical skills, and interests.",
+		"Learn about Cham Mendez, his development experience, technical toolkit, interests, and creative work.",
 };
-
-const skills = [
-	"Python",
-	"Java",
-	"C#",
-	"C++",
-	"SQL",
-	"JavaScript",
-	"TypeScript",
-	"React",
-	"React Native",
-	"Next.js",
-	"ASP.NET Core MVC",
-	"Expo",
-	"Django",
-	"Firebase",
-	"Git",
-	"GitHub",
-	"Docker",
-	"Figma",
-];
 
 export default function AboutPage() {
 	return (
 		<div className="bg-page">
-			<div className="mx-auto w-full max-w-6xl px-6 py-6">
-				<AboutSection
-					title="About me"
-					imageSrc="/images/portrait.jpg"
-					imageAlt="Portrait of Cham Mendez"
-				>
-					<p>
-						My name is Charl Emmanuel E. Mendez. I enjoy creating software that
-						combines technical problem-solving with thoughtful design.
-					</p>
+			<div className="mx-auto w-full max-w-[92rem] px-6 pb-40 pt-28 lg:px-10">
+				<div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(30rem,0.85fr)] lg:items-start">
+					<article className="w-full">
+						<p className="font-mono text-sm uppercase tracking-[0.3em] text-accent">
+							About me
+						</p>
 
-					<p>
-						My experience includes web and mobile development, codebase
-						analysis, artificial-intelligence evaluation, and software
-						engineering workflows. I particularly enjoy understanding how
-						frontend interfaces, backend services, databases, and APIs work
-						together.
-					</p>
+						<div className="mt-5 space-y-5 text-base leading-7 text-muted">
+							<p>
+								I’m Charl Emmanuel E. Mendez, a Computer Science student and
+								software developer focused on web and mobile development. I
+								enjoy understanding how systems work and turning ideas into
+								practical, well-designed applications.
+							</p>
 
-					<p>
-						Outside programming, I enjoy badminton, drawing, experimenting with
-						technology, and continuously improving my workspace.
-					</p>
-				</AboutSection>
+							<p>
+								I’m currently gaining professional experience as a Software
+								Engineering Intern at Stratpoint, where I continue developing my
+								technical skills, learning modern engineering workflows, and
+								working in a collaborative environment.
+							</p>
 
-				<AboutSection
-					title="Experience"
-					imageSrc="/images/experience.jpeg"
-					imageAlt="Workspace used by Cham for software development"
-					imageOnRight
-				>
-					<p>
-						I am currently gaining professional experience as a Software
-						Engineering Intern at Stratpoint, where I am strengthening my skills
-						in modern web development, collaborative software engineering, and
-						real-world project workflows.
-					</p>
+							<p>
+								Outside development, I enjoy drawing, badminton, games, anime,
+								music, solving puzzles, and continually improving my workspace.
+								These interests influence how I approach creativity,
+								problem-solving, and the projects I choose to build.
+							</p>
+						</div>
 
-					<p>
-						My internship has given me the opportunity to work with industry
-						tools and practices while learning how software is planned,
-						developed, reviewed, and maintained within a professional team
-						environment. I am also continuing to improve my understanding of
-						frontend development, version control, code quality, and effective
-						technical communication.
-					</p>
-				</AboutSection>
+						<section
+							aria-labelledby="technical-toolkit-heading"
+							className="mt-10"
+						>
+							<div className="flex items-center gap-4">
+								<h2
+									id="technical-toolkit-heading"
+									className="shrink-0 font-mono text-sm uppercase tracking-[0.25em] text-accent"
+								>
+									Technical toolkit
+								</h2>
+							</div>
 
-				<AboutSection
-					title="Education"
-					imageSrc="/images/education.jpeg"
-					imageAlt="First Asia Institute of Technology and Humanities campus"
-				>
-					<p>
-						I am pursuing a Bachelor of Science in Computer Science at the First
-						Asia Institute of Technology and Humanities in Tanauan City,
-						Batangas.
-					</p>
+							<div className="mt-6 space-y-5">
+								{skillGroups.map((group) => (
+									<section key={group.title}>
+										<h3 className="font-mono text-xs uppercase tracking-[0.18em] text-muted">
+											{group.title}
+										</h3>
 
-					<p>
-						I began the program in August 2023 and expect to graduate in May
-						2027. I have consistently been included in the President’s List from
-						my first year to the present.
-					</p>
+										<ul className="mt-3 flex flex-wrap gap-x-6 gap-y-4">
+											{group.skills.map((skill) => {
+												const Icon = skill.icon;
 
-					<p>
-						My studies have strengthened my foundations in programming,
-						algorithms, databases, object-oriented programming, networking, and
-						software development.
-					</p>
-				</AboutSection>
+												return (
+													<li
+														key={skill.name}
+														className="inline-flex items-center gap-2 text-muted transition-colors hover:text-accent"
+													>
+														<Icon
+															aria-hidden="true"
+															className="size-6 shrink-0"
+														/>
 
-				<AboutSection
-					title="Certifications and Awards"
-					imageSrc="/images/awards.jpg"
-					imageAlt="Programming certificates and competition awards"
-					imageOnRight
-				>
-					<div>
-						<h3 className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
-							Certifications
-						</h3>
+														<span className="font-mono text-sm">
+															{skill.name}
+														</span>
+													</li>
+												);
+											})}
+										</ul>
+									</section>
+								))}
+							</div>
+						</section>
+					</article>
 
-						<ul className="mt-3 list-disc space-y-2 pl-5">
-							<li>TOPCIT Level 3 Certification — Score: 421</li>
-							<li>CS50x: Introduction to Computer Science</li>
-							<li>CS50P: Introduction to Programming with Python</li>
-							<li>Networking Basics — Cisco Networking Academy</li>
-						</ul>
-					</div>
-
-					<div>
-						<h3 className="font-mono text-sm uppercase tracking-[0.2em] text-accent">
-							Awards and competitions
-						</h3>
-
-						<ul className="mt-3 list-disc space-y-2 pl-5">
-							<li>
-								2nd Runner-Up — ISITE National IT Skills Competition 2026,
-								Python Programming
-							</li>
-							<li>
-								Grand Finalist — CodeChum National Programming Challenge 2025
-							</li>
-							<li>Champion — CodeQuest School Programming Competition</li>
-							<li>
-								Competitor — ISITE National IT Skills Competition 2024, Java
-								Programming
-							</li>
-							<li>Consistent President’s Lister</li>
-						</ul>
-					</div>
-				</AboutSection>
-
-				<section className="py-16">
-					<div className="max-w-3xl">
-						<h2 className="mt-4 font-logo text-4xl font-semibold text-primary">
-							Skills
+					<section
+						aria-labelledby="personal-gallery-heading"
+						className="w-full max-w-xl justify-self-end"
+					>
+						<h2
+							id="technical-toolkit-heading"
+							className="mb-6 shrink-0 font-mono text-sm uppercase tracking-[0.25em] text-accent"
+						>
+							Personal Gallery
 						</h2>
 
-						<p className="mt-5 text-lg leading-8 text-muted">
-							These are some of the languages, frameworks, platforms, and
-							developer tools I have used in coursework, projects, and
-							professional evaluation work.
-						</p>
-					</div>
-
-					<ul className="mt-8 flex flex-wrap gap-3">
-						{skills.map((skill) => (
-							<li
-								key={skill}
-								className="border border-primary/15 bg-surface/80 px-4 py-2 font-mono text-sm text-primary"
-							>
-								{skill}
-							</li>
-						))}
-					</ul>
-				</section>
+						<AboutGallery collections={aboutGalleryCollections} />
+					</section>
+				</div>
 			</div>
 		</div>
 	);

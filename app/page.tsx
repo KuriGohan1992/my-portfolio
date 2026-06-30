@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import TimeGreeting from "@/components/TimeGreeting";
 
 export const metadata: Metadata = {
@@ -54,13 +55,35 @@ export default function HomePage() {
 					</h1>
 
 					<p className="mt-6 font-sans text-lg leading-8 text-muted">
-						I am a <span className="text-accent">Software Engineer</span> and
-						this is my developer portfolio, where you can learn more about me,
-						explore some of the projects I’ve built over the years, or send me a
-						message through the contact form. You can navigate either by
-						pointing and clicking or by using the CLI at the bottom of the
-						screen. Here is the list of available commands. (To be implemented
-						in the future)
+						I am a <span className="text-accent">Software Engineer</span>{" "}
+						focused on <span className="text-accent">Web Development</span> and{" "}
+						<span className="text-accent">Mobile App Development</span>.
+					</p>
+
+					<p className="mt-8 text-lg leading-8 text-muted">
+						This is my portfolio where you can learn more{" "}
+						<Link
+							href="/about"
+							className="text-primary underline-offset-4 transition-colors hover:underline"
+						>
+							about
+						</Link>{" "}
+						me and my life, explore the{" "}
+						<Link
+							href="/projects"
+							className="text-primary underline-offset-4 transition-colors hover:underline"
+						>
+							projects
+						</Link>{" "}
+						I’ve built over the years, or reach out to me through the{" "}
+						<Link
+							href="/contact"
+							className="text-primary underline-offset-4 transition-colors hover:underline"
+						>
+							contact
+						</Link>{" "}
+						form. Navigation can be done by pointing and clicking, or by using
+						the CLI at the bottom of the screen.
 					</p>
 				</div>
 
