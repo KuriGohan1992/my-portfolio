@@ -1,4 +1,12 @@
 export default function ProjectDetailLoading() {
+	const skeletonFeatures = [
+		"feature-one",
+		"feature-two",
+		"feature-three",
+		"feature-four",
+		"feature-five",
+		"feature-six",
+	];
 	return (
 		<div className="min-h-screen bg-[radial-gradient(circle_at_top,#101316_0%,#0b0d0f_45%,#080909_100%)]">
 			<main className="mx-auto w-full max-w-[80rem] px-6 pb-24 pt-24 lg:px-10">
@@ -17,8 +25,8 @@ export default function ProjectDetailLoading() {
 							<div className="mt-8 h-4 w-36 bg-primary/15" />
 
 							<div className="mt-5 space-y-4">
-								{Array.from({ length: 6 }).map((_, index) => (
-									<div key={index} className="flex gap-3">
+								{skeletonFeatures.map((feature) => (
+									<div key={feature} className="flex gap-3">
 										<div className="size-2 translate-y-2 rounded-full bg-primary/10" />
 										<div className="h-4 w-10/12 bg-primary/10" />
 									</div>

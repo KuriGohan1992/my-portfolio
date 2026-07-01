@@ -31,21 +31,20 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
 					<p className="mx-auto mt-5 max-w-2xl text-base text-muted">
 						The page encountered an unexpected error.
 					</p>
-                    <p className="mx-auto max-w-2xl text-base text-muted">
-						You can try loading it
-						again, or return to the homepage.
+					<p className="mx-auto max-w-2xl text-base text-muted">
+						You can try loading it again, or return to the homepage.
 					</p>
 
 					{error.message && (
-                        <div className="mx-auto mt-6 max-w-2xl text-left">
-                            <p className="mb-2 font-mono text-sm uppercase tracking-[0.2em] text-accent">
-                                Error Message
-                            </p>
-                            <p className="border-l border-primary/15 pl-4 font-mono text-sm text-muted">
-                                {error.message}
-                            </p>
-                        </div>
-                    )}
+						<div className="mx-auto mt-6 max-w-2xl text-left">
+							<p className="mb-2 font-mono text-sm uppercase tracking-[0.2em] text-accent">
+								Error Message
+							</p>
+							<p className="border-l border-primary/15 pl-4 font-mono text-sm text-muted">
+								{error.message}
+							</p>
+						</div>
+					)}
 
 					<div className="mt-8 flex flex-wrap justify-center gap-3">
 						<button

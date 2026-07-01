@@ -1,4 +1,7 @@
 export default function AboutLoading() {
+	const skeletonGroups = ["languages", "frameworks", "tools"];
+	const skeletonSkills = ["python", "html", "css", "javascript", "typescript"];
+
 	return (
 		<div className="bg-page">
 			<div className="mx-auto w-full max-w-[92rem] px-6 pb-40 pt-28 lg:px-10">
@@ -30,13 +33,13 @@ export default function AboutLoading() {
 							<div className="h-4 w-56 bg-primary/15" />
 
 							<div className="mt-8 space-y-6">
-								{Array.from({ length: 3 }).map((_, groupIndex) => (
-									<div key={groupIndex}>
+								{skeletonGroups.map((group) => (
+									<div key={group}>
 										<div className="h-4 w-28 bg-primary/10" />
 
 										<div className="mt-4 flex flex-wrap gap-x-8 gap-y-5">
-											{Array.from({ length: 5 }).map((_, index) => (
-												<div key={index} className="flex items-center gap-3">
+											{skeletonSkills.map((skill) => (
+												<div key={skill} className="flex items-center gap-3">
 													<div className="size-6 bg-primary/10" />
 													<div className="h-4 w-20 bg-primary/10" />
 												</div>

@@ -1,11 +1,13 @@
+import { projects } from "./project-data";
+
 export default function ProjectsLoading() {
 	return (
 		<div className="bg-page">
 			<div className="mx-auto w-full max-w-[76rem] px-6 pt-28 lg:px-10">
 				<section className="grid animate-pulse items-stretch gap-8 md:grid-cols-2 xl:grid-cols-3">
-					{Array.from({ length: 6 }).map((_, index) => (
+					{projects.map((project) => (
 						<article
-							key={index}
+							key={project.slug}
 							className="overflow-hidden rounded-md border border-primary/15 bg-surface"
 						>
 							<div className="h-44 bg-primary/10" />

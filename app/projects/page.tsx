@@ -14,7 +14,7 @@ export default function ProjectsPage() {
 		<div className="bg-page">
 			<div className="mx-auto w-full max-w-[76rem] px-6 pt-28 lg:px-10">
 				<section className="grid items-stretch gap-8 md:grid-cols-2 xl:grid-cols-3">
-					{projectas.map((project, index) => (
+					{projects.map((project, index) => (
 						<ProjectCard
 							key={project.slug}
 							project={project}

@@ -18,8 +18,8 @@ export default function NotFoundPage() {
 					/>
 
 					<h1 className="mt-4 font-logo text-4xl text-primary md:text-5xl">
-                        Error 404: Page not found
-                    </h1>
+						Error 404: Page not found
+					</h1>
 
 					<p className="mx-auto mt-5 max-w-2xl text-base text-muted">
 						The page you are looking for does not exist.
@@ -29,13 +29,13 @@ export default function NotFoundPage() {
 					</p>
 
 					<div className="mt-8 flex flex-wrap justify-center gap-3">
-                        <button
-                            type="button"
-                            onClick={() => window.history.back()}
-                            className="border border-primary/15 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-primary hover:text-primary"
-                        >
-                            Go Back
-                        </button>
+						<button
+							type="button"
+							onClick={() => window.history.back()}
+							className="border border-primary/15 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-primary hover:text-primary"
+						>
+							Go Back
+						</button>
 						<Link
 							href="/"
 							className="border border-primary/15 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-primary hover:text-primary"
