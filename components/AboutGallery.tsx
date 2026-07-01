@@ -151,7 +151,7 @@ export default function AboutGallery({ collections }: AboutGalleryProps) {
 
 							<div
 								aria-hidden="true"
-								className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/15 to-transparent"
+								className="absolute inset-0 bg-linear-to-t from-black/90 via-black/15 to-transparent"
 							/>
 
 							<div

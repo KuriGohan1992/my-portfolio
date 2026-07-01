@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+	// await new Promise((resolve) => setTimeout(resolve, 3000));
 	return (
 		<div className="bg-page">
 			<div className="mx-auto w-full max-w-[92rem] px-6 pb-40 pt-28 lg:px-10">
