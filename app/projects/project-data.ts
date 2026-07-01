@@ -3,7 +3,7 @@ export interface Project {
 	title: string;
 	description: string;
 	preview: string;
-	demo?: string;
+	youtubeEmbedUrl: string;
 	github: string;
 	liveUrl?: string;
 	technologies: string[];
@@ -18,7 +18,8 @@ export const projects: Project[] = [
 		description:
 			"A mobile marketplace for buying, selling, and requesting second-hand items.",
 		preview: "/previews/segunda.webm",
-		demo: "/previews/segunda.webm",
+		youtubeEmbedUrl:
+			"https://www.youtube.com/embed/wyAaq90ZQ80?si=p9FG4IQz9uf3BYu4",
 		github: "https://github.com/KuriGohan1992/segunda-mano",
 		technologies: [
 			"React Native",
@@ -44,7 +45,8 @@ export const projects: Project[] = [
 		description:
 			"A class scheduling system for checking rooms, sections, teachers, and schedules.",
 		preview: "/previews/klazerch.webm",
-		demo: "/previews/klazerch.webm",
+		youtubeEmbedUrl:
+			"https://www.youtube.com/embed/VZmdYNsblgU?si=j1MuDvOnNy-wsZV4",
 		github: "https://github.com/KuriGohan1992/klazerch",
 		technologies: ["ASP.NET Core MVC", "C#", "React Native", "Firebase"],
 		features: [
@@ -59,11 +61,12 @@ export const projects: Project[] = [
 	},
 	{
 		slug: "m4tr1cks",
-		title: "m4tr1cks",
+		title: "M4tr1cks",
 		description:
 			"A terminal-inspired matrix calculator for common matrix operations.",
 		preview: "/previews/matricks.webm",
-		demo: "/previews/matricks.webm",
+		youtubeEmbedUrl:
+			"https://www.youtube.com/embed/wO5y8Vo1atg?si=umfpDxOAhDOY-faC",
 		github: "https://github.com/KuriGohan1992/matricks",
 		liveUrl: "https://kurigohan1992.github.io/matricks",
 		technologies: ["HTML", "CSS", "JavaScript"],
@@ -76,7 +79,7 @@ export const projects: Project[] = [
 			"Displays answers and step-by-step solutions for supported operations",
 		],
 		details:
-			"m4tr1cks is a web-based matrix calculator built with a strong terminal-inspired visual style. It allows users to change matrix size, input values manually, generate random test values, and solve common matrix operations such as RREF, determinant, and inverse. The project focuses on making matrix computation easier to test and visualize in the browser.",
+			"M4tr1cks is a web-based matrix calculator built with a strong terminal-inspired visual style. It allows users to change matrix size, input values manually, generate random test values, and solve common matrix operations such as RREF, determinant, and inverse. The project focuses on making matrix computation easier to test and visualize in the browser.",
 	},
 	{
 		slug: "interactive-thermometer",
@@ -84,7 +87,8 @@ export const projects: Project[] = [
 		description:
 			"An educational thermometer that visualizes and converts temperature values.",
 		preview: "/previews/thermometer.webm",
-		demo: "/previews/thermometer.webm",
+		youtubeEmbedUrl:
+			"https://www.youtube.com/embed/J6WGG7kPVnk?si=CsS7IgMbF5r88J5Z",
 		github: "https://github.com/KuriGohan1992/interactive-thermometer",
 		liveUrl: "https://kurigohan1992.github.io/interactive-thermometer",
 		technologies: ["HTML", "CSS", "JavaScript"],
@@ -105,7 +109,8 @@ export const projects: Project[] = [
 		description:
 			"A terminal app that validates whether a binary string contains an odd number of zeroes.",
 		preview: "/previews/odd.webm",
-		demo: "/previews/odd.webm",
+		youtubeEmbedUrl:
+			"https://www.youtube.com/embed/5iKGziSTpTc?si=Cnuota0blOAfSkxo",
 		github: "https://github.com/KuriGohan1992/0dd",
 		technologies: ["Python", "curses"],
 		features: [
@@ -124,7 +129,8 @@ export const projects: Project[] = [
 		description:
 			"A statistics calculator for one-sample z-tests with graph and solution output.",
 		preview: "/previews/ztest.webm",
-		demo: "/previews/ztest.webm",
+		youtubeEmbedUrl:
+			"https://www.youtube.com/embed/n_uRKK75fRU?si=3Z8xl938SyseilC0",
 		github: "https://github.com/KuriGohan1992/z-test",
 		liveUrl: "https://kurigohan1992.github.io/z-test",
 		technologies: ["HTML", "CSS", "JavaScript"],

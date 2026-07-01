@@ -45,7 +45,7 @@ export default function ContactForm() {
 					name="name"
 					type="text"
 					required
-                    placeholder="Your name..."
+					placeholder="Your name..."
 					className="mt-2 w-full border rounded-md border-primary/15 bg-surface px-4 py-3 text-primary outline-none transition-colors focus:border-primary"
 				/>
 			</div>
@@ -59,7 +59,7 @@ export default function ContactForm() {
 					name="email"
 					type="email"
 					required
-                    placeholder="Your email..."
+					placeholder="Your email..."
 					className="mt-2 w-full border rounded-md border-primary/15 bg-surface px-4 py-3 text-primary outline-none transition-colors focus:border-primary"
 				/>
 			</div>
@@ -72,7 +72,7 @@ export default function ContactForm() {
 					id="message"
 					name="message"
 					required
-                    placeholder="Your message..."
+					placeholder="Your message..."
 					rows={7}
 					className="mt-2 w-full resize-none border rounded-md border-primary/15 bg-surface px-4 py-3 text-primary outline-none transition-colors focus:border-primary"
 				/>

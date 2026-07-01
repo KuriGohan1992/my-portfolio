@@ -85,15 +85,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 					</div>
 					<div>
 						<div className="overflow-hidden rounded-md border border-muted/50 bg-surface">
-							{/* biome-ignore lint/a11y/useMediaCaption: Demo videos are silent screen recordings */}
-							<video
-								className="aspect-video w-full object-cover"
-								controls
-								playsInline
-								preload="metadata"
-							>
-								<source src={project.demo} type="video/webm" />
-							</video>
+							<iframe
+								src={project.youtubeEmbedUrl}
+								title={`${project.title} video demo`}
+								className="aspect-video w-full"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerPolicy="strict-origin-when-cross-origin"
+								allowFullScreen
+							/>
 						</div>
 						<div className="mt-5">
 							<ul className="mt-3 flex flex-wrap gap-2">
