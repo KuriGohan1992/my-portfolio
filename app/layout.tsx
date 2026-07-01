@@ -57,19 +57,19 @@ export default function RootLayout({
 							/>
 						</Link> */}
 					{/* Alt Version of my logo */}
-					<div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-2">
+					<div className="mx-auto flex w-full max-w-6xl items-center justify-between px-2 py-4">
 						<Link href="/">
 							<Image
 								src="/images/white-logo-gear.png"
 								width={200}
-								height={100}
+								height={120}
 								alt="Cham;Mendez Logo"
 								priority
-								className="h-auto w-40"
+								className="h-14 w-auto"
 							/>
 						</Link>
 						<nav aria-label="Primary navigation">
-							<ul className="flex gap-6 font-mono text-sm text-muted">
+							<ul className="flex gap-6 font-mono text-md text-muted">
 								{navigationLinks.map((link) => (
 									<li key={link.href}>
 										<Link
