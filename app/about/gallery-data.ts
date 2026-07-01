@@ -15,8 +15,8 @@ export interface GalleryCollection {
 
 export const aboutGalleryCollections: GalleryCollection[] = [
 	{
-		id: "desk-setup",
-		title: "Desk Setup Over the Years",
+		id: "workspace",
+		title: "Workspace",
 		description:
 			"A visual timeline showing how my workspace changed as my interests, equipment, and needs evolved.",
 		images: [

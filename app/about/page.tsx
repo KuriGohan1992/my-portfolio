@@ -59,7 +59,7 @@ export default function AboutPage() {
 							<div className="mt-6 space-y-5">
 								{skillGroups.map((group) => (
 									<section key={group.title}>
-										<h3 className="font-mono text-xs uppercase tracking-[0.18em] text-muted">
+										<h3 className="font-mono text-sm text-muted">
 											{group.title}
 										</h3>
 
