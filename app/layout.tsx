@@ -64,6 +64,8 @@ export default function RootLayout({
 								width={200}
 								height={100}
 								alt="Cham;Mendez Logo"
+								priority
+								className="h-auto w-40"
 							/>
 						</Link>
 						<nav aria-label="Primary navigation">
