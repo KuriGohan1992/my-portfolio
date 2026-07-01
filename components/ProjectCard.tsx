@@ -22,8 +22,7 @@ export default function ProjectCard({
 	project,
 	patternIndex,
 }: ProjectCardProps) {
-	const patternClass =
-		patternClasses[patternIndex % patternClasses.length];
+	const patternClass = patternClasses[patternIndex % patternClasses.length];
 
 	return (
 		<article className="group relative flex h-full flex-col overflow-hidden rounded-md border border-primary/15 bg-surface transition-colors duration-300 hover:border-primary/35">
@@ -32,10 +31,7 @@ export default function ProjectCard({
 				className={`absolute inset-0 bg-[url('/backgrounds/vectors.webp')] bg-cover bg-no-repeat opacity-[0.08] transition-opacity duration-300 group-hover:opacity-[0.18] ${patternClass}`}
 			/>
 
-			<div
-				aria-hidden="true"
-				className="absolute inset-0 bg-surface/40"
-			/>
+			<div aria-hidden="true" className="absolute inset-0 bg-surface/40" />
 			<Link
 				href={`/projects/${project.slug}`}
 				aria-label={`View more information about ${project.title}`}
@@ -49,7 +45,6 @@ export default function ProjectCard({
 					Preview
 				</div> */}
 
-				
 				<video
 					className="h-full w-full object-cover"
 					autoPlay
@@ -59,14 +54,13 @@ export default function ProjectCard({
 				>
 					<source src={project.preview} type="video/webm" />
 				</video>
-				
 			</div>
 
 			<div className="pointer-events-none relative z-30 flex flex-1 flex-col p-4">
 				<div>
 					<h2 className="font-mono text-xl text-primary transition-colors group-hover:text-accent">
-                        {project.title}
-                    </h2>
+						{project.title}
+					</h2>
 
 					<p className="mt-2 text-sm leading-6 text-muted transition-colors group-hover:text-primary">
 						{project.description}
