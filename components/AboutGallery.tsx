@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-
 import type { GalleryCollection } from "@/app/about/gallery-data";
 
 interface AboutGalleryProps {
@@ -278,11 +278,21 @@ export default function AboutGallery({ collections }: AboutGalleryProps) {
 								{selectedCollection.title}
 							</h3>
 
-							<p className="mt-3 text-sm leading-6 text-muted">
+							<p className="mt-3 text-md leading-6 text-muted">
 								{selectedCollection.description}
+								{selectedCollection.driveLink && (
+									<Link
+										href={selectedCollection.driveLink}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="text-primary hover:underline"
+									>
+										here.
+									</Link>
+								)}
 							</p>
 
-							<div className="mt-10">
+							<div className="mt-4">
 								<p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
 									{selectedImageIndex + 1} of {selectedCollection.images.length}
 								</p>
@@ -291,9 +301,20 @@ export default function AboutGallery({ collections }: AboutGalleryProps) {
 									{selectedImage.title}
 								</h4>
 
-								<p className="mt-5 leading-7 text-muted">
+								<p className="my-3 leading-7 text-muted">
 									{selectedImage.description}
 								</p>
+
+								{selectedImage.referenceLink && (
+									<Link
+										href={selectedImage.referenceLink}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="text-accent hover:underline"
+									>
+										Reference
+									</Link>
+								)}
 							</div>
 						</aside>
 					</div>

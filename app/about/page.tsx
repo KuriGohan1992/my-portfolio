@@ -21,8 +21,42 @@ export default function AboutPage() {
 							About me
 						</p>
 
-						<div className="mt-5 space-y-5 text-base leading-7 text-muted">
-							<p>
+						<div className="mt-4 space-y-3 text-base leading-7 text-muted">
+							<p className="text-justify">
+								My name is Charl Emmanuel E. Mendez, an incoming fourth-year
+								Computer Science student at FAITH Colleges. I primarily
+								specialize in full-stack web and mobile application development.
+								I like understanding how systems work behind-the-scenes and how
+								the entire infrastructure functions together.
+							</p>
+
+							<p className="text-justify">
+								I’m currently accelerating my professional growth as a Software
+								Engineering Intern at Stratpoint Technologies, where I continue
+								developing my technical skills, learning modern engineering
+								workflows, and working in a real-world industrial environment.
+								If you want to learn more about my professional background you
+								can take a look at my{" "}
+								<a
+									href="/resume.pdf"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-accent underline-offset-4 hover:underline"
+								>
+									résumé
+								</a>
+								.
+							</p>
+
+							<p className="text-justify">
+								More than that, I also enjoy adding buzzwords to seem more
+								complex, sophisticated, and multi-faceted. I also tend to add an
+								unnecessary paragraph just to make the user interface look
+								symmetrical. Aside from that though, if you're keen on learning
+								more about me, you can check out the personal gallery I created.
+							</p>
+							<p>I use (n)vim btw!</p>
+							{/* <p>
 								I’m Charl Emmanuel E. Mendez, a Computer Science student and
 								software developer focused on web and mobile development. I
 								enjoy understanding how systems work and turning ideas into
@@ -41,12 +75,12 @@ export default function AboutPage() {
 								music, solving puzzles, and continually improving my workspace.
 								These interests influence how I approach creativity,
 								problem-solving, and the projects I choose to build.
-							</p>
+							</p> */}
 						</div>
 
 						<section
 							aria-labelledby="technical-toolkit-heading"
-							className="mt-10"
+							className="mt-4"
 						>
 							<div className="flex items-center gap-4">
 								<h2
@@ -57,21 +91,20 @@ export default function AboutPage() {
 								</h2>
 							</div>
 
-							<div className="mt-6 space-y-5">
+							<div className="mt-4 space-y-5">
 								{skillGroups.map((group) => (
 									<section key={group.title}>
-										<h3 className="font-mono text-sm text-muted">
+										<h3 className="font-mono text-sm text-primary">
 											{group.title}
 										</h3>
 
 										<ul className="mt-3 flex flex-wrap gap-x-6 gap-y-4">
 											{group.skills.map((skill) => {
 												const Icon = skill.icon;
-
 												return (
 													<li
 														key={skill.name}
-														className="inline-flex items-center gap-2 text-muted transition-colors hover:text-accent"
+														className="inline-flex items-center gap-2 text-muted transition-colors hover:text-primary"
 													>
 														<Icon
 															aria-hidden="true"

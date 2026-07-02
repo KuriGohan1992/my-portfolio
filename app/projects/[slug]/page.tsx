@@ -62,25 +62,25 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 						</section>
 						<div className="mt-5 flex flex-wrap items-center gap-3">
 							{project.liveUrl && (
-								<Link
+								<a
 									href={project.liveUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="inline-flex items-center gap-2 border border-primary/15 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-primary hover:text-primary"
+									className="inline-flex items-center gap-2 border rounded-full border-primary/15 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-primary hover:text-primary"
 								>
 									Live Demo
 									<FiExternalLink className="size-4" />
-								</Link>
+								</a>
 							)}
-							<Link
+							<a
 								href={project.github}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="inline-flex items-center gap-2 border border-primary/15 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-primary hover:text-primary"
+								className="inline-flex items-center gap-2 border rounded-full border-primary/15 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-primary hover:text-primary"
 							>
 								View on GitHub
 								<FaGithub className="size-4" />
-							</Link>
+							</a>
 						</div>
 					</div>
 					<div>
