@@ -25,7 +25,7 @@ export default function ProjectCard({
 	const patternClass = patternClasses[patternIndex % patternClasses.length];
 
 	return (
-		<article className="group relative flex h-full flex-col overflow-hidden rounded-md border border-primary/15 bg-surface transition-colors duration-300 hover:border-primary/35">
+		<article className="group relative flex h-full flex-col overflow-hidden rounded-md border border-primary/15 bg-page transition-colors duration-300 hover:border-primary/35">
 			<div
 				aria-hidden="true"
 				className={`absolute inset-0 bg-[url('/backgrounds/vectors.webp')] bg-cover bg-no-repeat opacity-[0.08] transition-opacity duration-300 group-hover:opacity-[0.18] ${patternClass}`}

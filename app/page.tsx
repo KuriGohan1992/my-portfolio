@@ -32,7 +32,7 @@ const commands = [
 
 export default function HomePage() {
 	return (
-		<section className="animated-background relative flex items-center isolate min-h-dvh overflow-hidden">
+		<section className="relative flex items-center isolate min-h-dvh overflow-hidden">
 			{/* <Image
 				src="/backgrounds/steins_gate_vectors.jpg"
 				alt=""
@@ -42,7 +42,7 @@ export default function HomePage() {
 				className="absolute inset-0 -z-20 h-full w-full object-cover opacity-80"
 			/> */}
 
-			<div aria-hidden="true" className="absolute inset-0 -z-10 bg-page/80" />
+			{/* <div aria-hidden="true" className="absolute inset-0 -z-10 bg-page/80" /> */}
 
 			<div className="mx-auto w-full max-w-6xl px-6 py-20">
 				<div>

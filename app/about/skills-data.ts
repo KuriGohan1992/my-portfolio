@@ -1,7 +1,6 @@
 import type { IconType } from "react-icons";
 import { FaDatabase } from "react-icons/fa6";
 import {
-	SiAndroidstudio,
 	SiCss,
 	SiDjango,
 	SiDocker,
@@ -111,10 +110,6 @@ export const skillGroups: SkillGroup[] = [
 			{
 				name: "VS Code",
 				icon: VscVscode,
-			},
-			{
-				name: "Android Studio",
-				icon: SiAndroidstudio,
 			},
 			{
 				name: "Figma",

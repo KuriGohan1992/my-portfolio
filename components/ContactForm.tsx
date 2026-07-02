@@ -21,7 +21,7 @@ function SubmitButton() {
 		<button
 			type="submit"
 			disabled={pending}
-			className="border rounded-md border-primary/15 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-50"
+			className="bg-surface border rounded-md border-primary/15 px-4 py-2 font-mono text-sm text-muted transition-colors hover:border-primary/50 hover:text-primary disabled:cursor-not-allowed disabled:opacity-50"
 		>
 			{pending ? "Sending..." : "Send Message"}
 		</button>
@@ -36,8 +36,11 @@ export default function ContactForm() {
 
 	return (
 		<form action={formAction} className="mt-8 max-w-2xl space-y-5">
-			<div>
-				<label htmlFor="name" className="font-mono text-sm text-muted">
+			<div className="group">
+				<label
+					htmlFor="name"
+					className="font-mono text-sm text-muted group-focus-within:text-primary"
+				>
 					Name
 				</label>
 				<input
@@ -46,12 +49,15 @@ export default function ContactForm() {
 					type="text"
 					required
 					placeholder="Your name..."
-					className="mt-2 w-full border rounded-md border-primary/15 bg-surface px-4 py-3 text-primary outline-none transition-colors focus:border-primary"
+					className="mt-2 w-full border rounded-md border-primary/15 bg-surface px-4 py-3 text-primary outline-none transition-colors focus:border-primary/50"
 				/>
 			</div>
 
-			<div>
-				<label htmlFor="email" className="font-mono text-sm text-muted">
+			<div className="group">
+				<label
+					htmlFor="email"
+					className="font-mono text-sm text-muted group-focus-within:text-primary"
+				>
 					Email
 				</label>
 				<input
@@ -60,12 +66,15 @@ export default function ContactForm() {
 					type="email"
 					required
 					placeholder="Your email..."
-					className="mt-2 w-full border rounded-md border-primary/15 bg-surface px-4 py-3 text-primary outline-none transition-colors focus:border-primary"
+					className="mt-2 w-full border rounded-md border-primary/15 bg-surface px-4 py-3 text-primary outline-none transition-colors focus:border-primary/50"
 				/>
 			</div>
 
-			<div>
-				<label htmlFor="message" className="font-mono text-sm text-muted">
+			<div className="group">
+				<label
+					htmlFor="message"
+					className="font-mono text-sm text-muted group-focus-within:text-primary"
+				>
 					Message
 				</label>
 				<textarea
@@ -74,7 +83,7 @@ export default function ContactForm() {
 					required
 					placeholder="Your message..."
 					rows={7}
-					className="mt-2 w-full resize-none border rounded-md border-primary/15 bg-surface px-4 py-3 text-primary outline-none transition-colors focus:border-primary"
+					className="mt-2 w-full resize-none border rounded-md border-primary/15 bg-surface px-4 py-3 text-primary outline-none transition-colors focus:border-primary/50"
 				/>
 			</div>
 

@@ -46,45 +46,53 @@ export default function RootLayout({
 			className={`${cormorantGaramond.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
 		>
 			<body className="min-h-full flex flex-col bg-page font-sans text-primary">
-				<header className="fixed inset-x-0 top-0 z-50 border-b border-primary/10 bg-page/80 backdrop-blur">
-					{/* <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
-						<Link href="/">
-							<Image
-								src="/images/white-logo.png"
-								width={200}
-								height={100}
-								alt="Cham;Mendez Logo"
-							/>
-						</Link> */}
-					{/* Alt Version of my logo */}
-					<div className="mx-auto flex w-full max-w-6xl items-center justify-between px-2 py-4">
-						<Link href="/">
-							<Image
-								src="/images/white-logo-gear.png"
-								width={200}
-								height={120}
-								alt="Cham;Mendez Logo"
-								priority
-								className="h-14 w-auto"
-							/>
-						</Link>
-						<nav aria-label="Primary navigation">
-							<ul className="flex gap-6 font-mono text-md text-muted">
-								{navigationLinks.map((link) => (
-									<li key={link.href}>
-										<Link
-											href={link.href}
-											className="transition-colors hover:text-primary"
-										>
-											{link.label}
-										</Link>
-									</li>
-								))}
-							</ul>
-						</nav>
-					</div>
-				</header>
-				<main className="flex-1">{children}</main>
+				<div
+					aria-hidden="true"
+					className="animated-background pointer-events-none fixed inset-0 z-0 overflow-hidden"
+				>
+					<div className="absolute inset-0 bg-page/80" />
+				</div>
+				<div className="relative z-10">
+					<header className="fixed inset-x-0 top-0 z-50 border-b border-primary/10 bg-page/80 backdrop-blur">
+						{/* <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5">
+							<Link href="/">
+								<Image
+									src="/images/white-logo.png"
+									width={200}
+									height={100}
+									alt="Cham;Mendez Logo"
+								/>
+							</Link> */}
+						{/* Alt Version of my logo */}
+						<div className="mx-auto flex w-full max-w-6xl items-center justify-between px-2 py-4">
+							<Link href="/">
+								<Image
+									src="/images/white-logo-gear.png"
+									width={200}
+									height={120}
+									alt="Cham;Mendez Logo"
+									priority
+									className="h-14 w-auto"
+								/>
+							</Link>
+							<nav aria-label="Primary navigation">
+								<ul className="flex gap-6 font-mono text-md text-muted">
+									{navigationLinks.map((link) => (
+										<li key={link.href}>
+											<Link
+												href={link.href}
+												className="transition-colors hover:text-primary"
+											>
+												{link.label}
+											</Link>
+										</li>
+									))}
+								</ul>
+							</nav>
+						</div>
+					</header>
+					<main className="flex-1">{children}</main>
+				</div>
 				{/* <footer className="fixed inset-x-0 bottom-0 z-50 border-t border-primary/10 bg-page/80 backdrop-blur">
 					<div className="mx-auto flex w-full max-w-6xl items-center justify-between px-3 py-2">
 						<nav aria-label="Primary navigation">
